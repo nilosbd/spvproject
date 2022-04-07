@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Product Info | CHBD</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+
+    <section id="banner">
+        <a href="index.html"> <img src="images/logo.png" class="logo" alt=""> </a>
+        <div class="banner-text">
+            
+           
+        </div>
+
+    </section>
+
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="index.html">Features </a></li>
+                <li><a href="index.html">Services </a></li>
+                <li><a href="index.html">Testimonials </a></li>
+                <li><a href="index.html">Meet US </a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div id="menuBtn">
+        <img src="images/menu.png" alt="" id="menu">
+    </div>
+
+    <form class="box" action="product.php" method="POST">
+        <h1>Product Info</h1>
+        <input type="phone" name="design_ID" placeholder="Enter Design Code" required>
+        <input type="text" name="p_type" placeholder="Product Type (Jersey, Shorts etc)" required>
+        <input type="text" name="p_description" placeholder="Product Desc (Football or Cricket)" required>
+        <input type="text" name="fabrics_type" placeholder="Fabrics Type (PP or Mesh)" required>
+        <input type="phone" name="GSM" placeholder="GSM (170 or 180)" required>
+
+        <input type="submit" value="Next" name="submit">
+        <input type="reset" value="Reset" name="reset">
+    
+    </form>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+
+        sideNav.style.right = "-220px"
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-220px") {
+                sideNav.style.right = "0";
+                menu.src = "images/close.png";
+
+            }
+            else {
+                sideNav.style.right = "-220px";
+                menu.src = "images/menu.png";
+            }
+        }
+
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+
+    </script>
+
+</body>
+
+</html>
